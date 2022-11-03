@@ -21,7 +21,7 @@ using Microsoft.AspNetCore.Http.Internal;
 
 namespace EJ2APIServices.Controllers
 {
-    public class FileManagerDirectoryContent1 : FileManagerDirectoryContent
+    public class CustomFileManagerDirectoryContent : FileManagerDirectoryContent
     {
         public string User_name { get; set; }
     }
@@ -42,7 +42,7 @@ namespace EJ2APIServices.Controllers
             this.operation.RootFolder(this.basePath + "\\" + this.root);
         }
         [Route("FileOperations")]
-        public object FileOperations([FromBody] FileManagerDirectoryContent1 args)
+        public object FileOperations([FromBody] CustomFileManagerDirectoryContent args)
         {
             this.operation.SetRules(GetRules(args.User_name));
             if (args.Action == "delete" || args.Action == "rename")
