@@ -1,6 +1,18 @@
 # common-filemanager-providers-access-control
 
-This repository contains the ASP.NET Core file system providers for the Essential JS 2 File Manager component.
+**Repository Description**  
+This repository contains the **ASP.NET Core file system providers** for the Syncfusion **Essential JS 2 File Manager** component. These providers expose server‑side APIs that allow the File Manager UI to interact with the physical file system for common file operations.
+
+The ASP.NET Core file system provider enables secure access to directories and supports a wide range of file management actions required by the File Manager component.
+
+## Project Overview
+The purpose of this project is to provide a backend implementation for the Syncfusion Essential JS 2 File Manager component using **ASP.NET Core**. It demonstrates how to handle file system operations such as reading files, uploading content, renaming items, and managing folders through REST‑style APIs.
+
+## Prerequisites
+Ensure the following requirements are met before running this project:
+- Visual Studio  
+- .NET SDK compatible with ASP.NET Core  
+- Basic knowledge of ASP.NET Core Web APIs  
 
 ## Key Features
 
@@ -10,21 +22,22 @@ ASP.NET Core file system provider serves the physical file system for the file m
 
 The following actions can be performed with ASP.NET Core file system Provider.
 
-| **Actions** | **Description** |
-| --- | --- |
-| Read      | Read the files from the local file storage. |
-| Details   | Gets a file's metadata which consists of Type, Size, Location and Modified date. |
-| Download  | Download the selected file or folder. |
-| Upload    | Upload's the file. t accepts uploaded media with the following characteristics: <ul><li>Maximum file size:  30MB</li><li>Accepted Media MIME types: `*/*`
-</li></ul> |
-| Create    | Create a new folder. |
-| Delete    | Delete a folder or file. |
-| Copy      | Copies the contents of the file from the target location . |
-| Move      | Paste the copied files to the desired location. |
-| Rename    | Rename a folder or file. |
-| Search    | Search a file or folder. |
+| **Action**  | **Description** |
+|------------|------------------|
+| Read       | Reads files from the local file storage. |
+| Details    | Retrieves file metadata, including **Type**, **Size**, **Location**, and **Modified Date**. |
+| Download   | Downloads the selected file or folder. |
+| Upload     | Uploads files with the following constraints:<br><ul><li>Maximum file size: **30 MB**</li><li>Accepted MIME types: `*/*`</li></ul> |
+| Create     | Creates a new folder. |
+| Delete     | Deletes a file or folder. |
+| Copy       | Copies files or folders from the source location. |
+| Move       | Moves (pastes) copied files or folders to the target location. |
+| Rename     | Renames a file or folder. |
+| Search     | Searches for files or folders. |
 
-## How to run this application?
+## Installation and Running the Project
+
+### How to run this application?
 
 To run this application, you need to first clone the `ej2-aspcore-file-provider` repository and then navigate to its appropriate path where it has been located in your system.
 
@@ -37,11 +50,11 @@ cd ej2-aspcore-file-provider
 
 ```
 
-## Running application
+### Running application
 
 Once cloned, open solution file in visual studio.Then build the project after restoring the nuget packages and run it.
 
-## File Manager AjaxSettings
+### File Manager AjaxSettings
 
 To access the basic actions such as Read, Delete, Copy, Move, Rename, Search, and Get Details of File Manager using Azure service, just map the following code snippet in the Ajaxsettings property of File Manager.
 
@@ -54,7 +67,7 @@ Here, the `hostUrl` will be your locally hosted port number.
   }
 ```
 
-## File download AjaxSettings
+### File download AjaxSettings
 
 To perform download operation, initialize the `downloadUrl` property in ajaxSettings of the File Manager component.
 
@@ -66,7 +79,7 @@ To perform download operation, initialize the `downloadUrl` property in ajaxSett
   }
 ```
 
-## File upload AjaxSettings
+### File upload AjaxSettings
 
 To perform upload operation, initialize the `uploadUrl` property in ajaxSettings of the File Manager component.
 
@@ -78,7 +91,7 @@ To perform upload operation, initialize the `uploadUrl` property in ajaxSettings
   }
 ```
 
-## File image preview AjaxSettings
+### File image preview AjaxSettings
 
 To perform image preview support in the File Manager component, initialize the `getImageUrl` property in ajaxSettings of the File Manager component.
 
@@ -93,6 +106,21 @@ To perform image preview support in the File Manager component, initialize the `
 The FileManager will be rendered as the following.
 
 ![File Manager](https://ej2.syncfusion.com/products/images/file-manager/readme.gif)
+
+## Documentation
+- General Syncfusion documentation:
+https://help.syncfusion.com/
+- Essential JS 2 File Manager – Getting Started:
+https://ej2.syncfusion.com/documentation/file-manager/
+
+## Additional Resources
+- Syncfusion File Manager product overview:
+https://www.syncfusion.com/javascript-ui-controls/js-file-manager
+
+## Troubleshooting
+- Ensure the API URLs in ajaxSettings match the running server port.
+- Verify file system permissions for read/write operations.
+- Rebuild the solution if API endpoints fail to respond.
 
 ## Support
 
