@@ -1,4 +1,4 @@
-# common-filemanager-providers-access-control
+# Common-filemanager-providers-access-control
 
 **Repository Description**  
 This repository contains the **ASP.NET Core file system providers** for the Syncfusion **Essential JS 2 File Manager** component. These providers expose server‑side APIs that allow the File Manager UI to interact with the physical file system for common file operations.
